@@ -1,0 +1,12 @@
+main: me.oqwe.extrachannels.Main
+version: 1.1
+name: ExtraChannels
+author: oqwe
+api-version: 1.19
+commands:
+  channel:
+    description: 'Select a channel'
+    aliases: [c, ch]
+  extrachannels:
+    description: 'Does everything'
+    aliases: [ec]

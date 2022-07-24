@@ -1,0 +1,139 @@
+# This is the config file for ExtraChannels
+
+# The name and associated data of every channel is stored in channels.yml. You can create, edit and delete channels directly in the file
+# but I recommend that you use the ingame commands for this, as a single misplaced space in the file can cause the entire plugin to fail. 
+
+# If you ever have problems with players not getting the right channels or something like that, a quick /ec reload
+# will probably help. This not only reloads the contents of this file but also manually updates the internal storage where
+# the plugin keeps track of which players have acces to which channels. If this doesn't fix it, feel free to message me on spigot and
+# I will try to fix the problem and update the plugin.
+
+####################################################################################################
+#                                                                                                  #
+#                                                                                                  #
+#                                    GLOBAL CHANNEL CONFIGURATION                                  #
+#                                                                                                  #
+#                                                                                                  #
+####################################################################################################
+
+# Set this to true if you wish to disable the standard minecraft chat. If this is true, you can only chat in custom channels
+disable-global: false
+
+# Here you can set the prefix of the global channel
+global-prefix: '&aGLOBAL &7>'
+
+# Here you can set the display name of the global channel
+global-display-name: '&aGLOBAL'
+
+# Here you can enable or disable formatting of the global channel.
+format-global: true
+
+# Here you can set the format for the global channel. You can use <channelprefix> for the prefix of the channel, 
+# <playername> for the name of the person who sent the message and <message> for the message.
+global-format: '<channelprefix> &r<playername> &r&7> &r<message>'
+
+# If true, players will be able to mute the global channel with /ec mute global, if false global can't be muted
+global-mute: true
+
+####################################################################################################
+#                                                                                                  #
+#                                                                                                  #
+#                                    CUSTOM CHANNEL CONFIGURATION                                  #
+#                                                                                                  #
+#                                                                                                  #
+####################################################################################################
+
+# Here you can set the format for messages in your custom channels. You can use <channelprefix> for the prefix of the channel, 
+# <playername> for the name of the person who sent the message and <message> for the message.
+format: '<channelprefix> &r<playername> &r&7> &r<message>'
+
+# Here you can set the prefix of the plugin. This doesn't accept placeholders.
+# The prefix is shown before messages from the plugin when using commands that are meant for staff.
+# On messages meant for the players, the prefix will not be shown. 
+prefix: '&6ExtraChannels &7> &r'
+
+####################################################################################################
+#                                                                                                  #
+#                                                                                                  #
+#                                         OTHER CONFIGURATION                                      #
+#                                                                                                  #
+#                                                                                                  #
+####################################################################################################
+
+# Here you can change the message sent when a player runs /ec help. I recommend that you leave this unchanged, 
+# but you can change it if you so desire. You can use <prefix> for the plugin prefix. 
+# This accepts no other placeholders. 
+help:
+  - '<prefix> &eThe following commands are available'
+  - '&7Note that &6/ec &7is an alias for &6/extrachannels'
+  - '&7Create a new channel'
+  - '&7- &6/ec create &7<&ename&7> <&epermission&7> <&edisplayname&7> <&eprefix&7>'
+  - '&7Edit a channel'
+  - '&7- &6/ec edit &7<&ename&7> <&epermission&7/&edisplayname&7/&eprefix&7> <&enew value&7>'
+  - '&7Delete a channel'
+  - '&7- &6/ec delete &7<&ename&7>'
+  - '&7Select a channel to talk in - note that &6/c &7is an alias for &6/channel'
+  - '&7- &6/c &7<&ename&7/&aglobal&7>'
+  - '&7See a list of existing channels'
+  - '&7- &6/ec list'
+  - '&7See all associated data of a channel'
+  - '&7- &6/ec data &7<&echannel&7>'
+  - '&7See all online players with acces to a specific channel'
+  - '&7- &6/ec players &7<&echannel&7>'
+  - '&7See all the channels that you have acces to'
+  - '&7- &6/ec channels'
+  - '&7Mute a channel'
+  - '&7- &6/ec mute &7<&echannel&7>'
+  - '&7Unmute a channel'
+  - '&7- &6/ec unmute &7<&echannel&7>'
+  - '&7See a list of channels that you have muted'
+  - '&7- &6/ec mutelist'
+  - '&7Reload configuration file'
+  - '&7- &6/ec reload'
+  - '&7See the help menu'
+  - '&7- &6/ec help'
+
+####################################################################################################
+#                                                                                                  #
+#                                                                                                  #
+#                                           PERMISSIONS                                            #
+#                                                                                                  #
+#                                                                                                  #
+####################################################################################################
+
+# Here is a list of all permissions and their purpose
+
+# extrachannels.select
+# Allows a player to use /c <channel> to select a channel
+
+# extrachannels.create
+# Allows a player to create channels using /ec create
+
+# extrachannels.edit
+# Allows a player to edit channels using /ec edit
+
+# extrachannels.delete
+# Allows a player to delete channels using /ec delete
+
+# extrachannels.channels
+# Allows a player to see a list of all their available channels using /ec channels
+
+# extrachannels.players
+# Allows a player to see all online players with acces to a specific channel using /ec players <channel>
+
+# extrachannels.data
+# Allows a player to see the data associated with a channel using /ec data <channel>
+
+# extrachannels.list
+# Allows a player to see a list of all existing channels using /ec list
+
+# extrachannels.mute
+# Allows a player to mute and unmute channels using /ec mute <channel>
+
+# extrachannels.help
+# Allows a player to view the configurable help message using /ec help
+
+# extrachannels.reload
+# Allows a player to reload the configuration and the internal channel storage as explained in the top of this file using /ec reload
+
+# The permission to be apart of any channel is defined when creating the channel and can be viewed using /ec data <channel>
